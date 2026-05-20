@@ -3,6 +3,7 @@
   width: 100%;
   padding: clamp(64px, 9vw, 104px) clamp(20px, 6vw, 88px);
   background: var(--color-surface);
+  scroll-margin-top: 88px;
 }
 
 .therapist-section .section-heading {

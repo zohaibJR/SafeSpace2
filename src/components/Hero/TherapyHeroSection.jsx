@@ -3,7 +3,7 @@ import Logo from '../Navbar/NavbarLogo.PNG'
 
 function TherapyHeroSection() {
   return (
-    <section className="therapyHero">
+    <section className="therapyHero" id="about">
       <div className="therapyHero__banner">
         <div className="therapyHero__eyebrow">Virtual Therapy &amp; Counselling</div>
 
@@ -12,7 +12,7 @@ function TherapyHeroSection() {
         </h1>
 
         <p className="therapyHero__subtitle">
-          We provide  Virtual Therapy and Counselling{' '}
+          We provide virtual therapy and counselling with a{' '}
           <span>licensed clinical psychologist.</span>
         </p>
 
@@ -41,7 +41,7 @@ function TherapyHeroSection() {
           </p>
 
           <button className="cta-btn cta-btn--primary" type="button">
-            Book Therapy Session →
+            Book Therapy Session
           </button>
         </div>
 

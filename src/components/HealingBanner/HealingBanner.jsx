@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './HealingBanner.css';
 
 export class HealingBanner extends Component {

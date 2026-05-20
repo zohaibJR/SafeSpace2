@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './YourHelp.css';
 
 export class YourHelp extends Component {
@@ -11,7 +11,7 @@ export class YourHelp extends Component {
     ];
 
     return (
-      <section className="services-container">
+      <section className="services-container" id="our-services">
         <h2 className="section-heading">How We Help You</h2>
         <p className="services__sub">Tailored support for where you are right now</p>
 

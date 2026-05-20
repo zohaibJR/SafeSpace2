@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './BeforeStep.css';
 
 const faqs = [
@@ -23,7 +23,7 @@ const faqs = [
 export class BeforeStep extends Component {
   render() {
     return (
-      <section className="info-section">
+      <section className="info-section" id="faq">
         <h2 className="section-heading">Before You Take the Next Step</h2>
 
         <div className="info-grid">

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './Footer.css';
 
 export class Footer extends Component {
   render() {
     return (
-      <footer className="site-footer">
+      <footer className="site-footer" id="contact">
         <div className="footer-container">
 
           {/* Left – Brand & Contact */}

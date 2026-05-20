@@ -6,50 +6,62 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const menuItems = [
-    'About',
-    'Our Services',
-    'Our Therapists',
-    'FAQ',
-    'Contact',
+    { label: 'About', href: '#about' },
+    { label: 'Our Services', href: '#our-services' },
+    { label: 'Our Therapists', href: '#our-therapists' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (
     <header className="navbar">
-      <a className="navbar__brand" href="/" aria-label="SafeSpace home">
-        <img
-          src={NavbarLogo}
-          alt="SafeSpace Logo"
-          className="navbar__logo"
-        />
-      </a>
+      <div className="navbar__inner">
+        <a className="navbar__brand" href="#about" aria-label="SafeSpace home">
+          <img
+            src={NavbarLogo}
+            alt="SafeSpace Logo"
+            className="navbar__logo"
+          />
+        </a>
 
-      <button
-        className={`navbar__toggle${menuOpen ? ' open' : ''}`}
-        aria-label="Toggle menu"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <button
+          className={`navbar__toggle${menuOpen ? ' open' : ''}`}
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <nav
-        className={`navbar__menu${menuOpen ? ' mobile-open' : ''}`}
-        aria-label="Main navigation"
-      >
-        {menuItems.map((item) => (
-          <a
-            className="navbar__link"
-            href={`#${item.toLowerCase().replaceAll(' ', '-')}`}
-            key={item}
-            onClick={() => setMenuOpen(false)}
-          >
-            {item}
-          </a>
-        ))}
-      </nav>
+        <nav
+          id="primary-navigation"
+          className={`navbar__menu${menuOpen ? ' mobile-open' : ''}`}
+          aria-label="Main navigation"
+        >
+          {menuItems.map((item) => (
+            <a
+              className="navbar__link"
+              href={item.href}
+              key={item.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
 
-      <button className="navbar__cta">Book a Session</button>
+        <a
+          className="navbar__cta"
+          href="#contact"
+          onClick={() => setMenuOpen(false)}
+        >
+          Book a Session
+        </a>
+      </div>
     </header>
   )
 }

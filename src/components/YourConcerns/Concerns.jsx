@@ -1,4 +1,3 @@
-import React from "react";
 import "./Concerns.css";
 
 const concerns = [
@@ -16,7 +15,7 @@ const concerns = [
 
 const ConcernsYouAreComingWithSection = () => {
   return (
-    <div className="concernsContainer">
+    <section className="concernsContainer">
       <h2 className="section-heading">Concerns You Are Coming With</h2>
       {/* <p className="concerns__sub">
         You are not alone. Many people come to us with these same feelings.
@@ -28,7 +27,7 @@ const ConcernsYouAreComingWithSection = () => {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

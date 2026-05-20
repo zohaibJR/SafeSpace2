@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './ClientReviews.css';
 
 export class ClientReviews extends Component {

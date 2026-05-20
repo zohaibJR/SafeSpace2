@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import therapistImg from "../Assets/Therapist.png";
 import './MeetTherapist.css';
 
 export class MeetTherapist extends Component {
   render() {
     return (
-      <section className="therapist-section">
+      <section className="therapist-section" id="our-therapists">
         <h2 className="section-heading">Meet Our Therapist</h2>
 
         <div className="therapist-container">
