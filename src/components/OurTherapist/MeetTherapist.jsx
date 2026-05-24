@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import therapistImg from "../Assets/Therapist.png";
+import therapistImg from "../Assets/Therapist2.png";
 import './MeetTherapist.css';
 
 export class MeetTherapist extends Component {
@@ -38,7 +38,17 @@ export class MeetTherapist extends Component {
               "Many adult emotional struggles are shaped by earlier experiences, unmet needs, and patterns formed in childhood."
             </blockquote>
 
-            <button className="more-btn">More About Her →</button>
+            <button
+  className="more-btn"
+  onClick={() =>
+    window.open(
+      "https://www.linkedin.com/in/sana-iftikhar-0546a92ba/",
+      "_blank"
+    )
+  }
+>
+  More About Her →
+</button>
           </div>
 
         </div>

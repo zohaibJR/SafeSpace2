@@ -1,16 +1,20 @@
 /* ───────── CLIENT REVIEWS ───────── */
+
 .reviews-section {
   width: 100%;
-  padding: clamp(64px, 9vw, 104px) 0;
+  padding: clamp(64px, 9vw, 104px) 20px;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0, 95, 132, 0.04) 0%, transparent 70%),
+    radial-gradient(
+      ellipse 80% 60% at 50% 50%,
+      rgba(0, 183, 255, 0.04) 0%,
+      transparent 70%
+    ),
     var(--color-page);
-  overflow: hidden;
 }
 
 .reviews-section .section-heading {
   margin-bottom: 8px;
-  padding: 0 20px;
+  text-align: center;
 }
 
 .reviews__sub {
@@ -19,48 +23,35 @@
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 48px;
-  padding: 0 20px;
 }
 
-/* Viewport */
-.marquee-viewport {
-  width: 100%;
-  overflow: hidden;
-  padding: 12px 0 20px;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 7%,
-    black 93%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 7%,
-    black 93%,
-    transparent
-  );
-}
+/* Container */
 
-/* Track */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: scrollHorizontal var(--scroll-duration) linear infinite;
-  will-change: transform;
-}
-
-/* Content */
-.marquee-content {
+.reviews-container {
+  justify-content: center;
+  align-items: center;
   display: flex;
   gap: 24px;
-  padding-right: 24px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Optional scrollbar styling */
+
+.reviews-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 95, 132, 0.3);
+  border-radius: 10px;
 }
 
 /* Card */
+
 .review-card {
-  width: 400px;
+  flex: 0 0 400px;
   min-height: 260px;
   background: var(--color-surface);
   border: 1.5px solid var(--color-border);
@@ -71,7 +62,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .review-card:hover {
@@ -81,13 +72,11 @@
 
 .quote-icon {
   font-size: 3rem;
-  color: var(--color-primary);
-  font-family: var(--font-display);
+  color: #1871a1;
   position: absolute;
   top: 16px;
   left: 22px;
   line-height: 1;
-  opacity: 0.25;
 }
 
 .review-text {
@@ -101,22 +90,20 @@
 
 .stars-container {
   display: flex;
-  gap: 3px;
+  justify-content: center;
+  gap: 4px;
 }
 
 .star {
-  color: var(--color-primary);
-  font-size: 1.1rem;
+  color: #1871a1;
+  font-size: 1.75rem;
 }
 
-@keyframes scrollHorizontal {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
+/* Mobile */
 
 @media (max-width: 600px) {
   .review-card {
-    width: 300px;
-    min-height: 280px;
+    flex: 0 0 300px;
+    min-height: 300px;
   }
 }

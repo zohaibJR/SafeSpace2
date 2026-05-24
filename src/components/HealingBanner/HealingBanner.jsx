@@ -2,26 +2,57 @@ import { Component } from 'react';
 import './HealingBanner.css';
 
 export class HealingBanner extends Component {
+
+  handleBooking(url) {
+    window.open(url, '_blank');
+  }
+
   render() {
     return (
       <section className="healing-banner">
+
         <h2 className="healing-title">
-          Healing doesn't begin<br />
-          with having <em>all the answers</em>
+
+          <span className="title-part-1">
+            Healing <br />
+          </span>
+
+          <span className="title-part-2">
+            doesn't begin with having all the answers
+          </span>
+
         </h2>
 
-        <p className="healing-sub">
-          It begins with a single, courageous step towards understanding yourself.
-        </p>
+        <br />
+        <br />
+        
 
         <div className="button-group">
-          <button className="cta-btn cta-btn--outline">
+
+          <button
+            className="cta-btn cta-btn--outline"
+            onClick={() =>
+              this.handleBooking(
+                'https://cal.com/safe-space-qolbcw/15-minutes-free-introductory-session'
+              )
+            }
+          >
             Book Free Intro Session
           </button>
-          <button className="cta-btn cta-btn--primary">
+
+          <button
+            className="cta-btn cta-btn--primary"
+            onClick={() =>
+              this.handleBooking(
+                'https://cal.com/safe-space-qolbcw/therapy-session'
+              )
+            }
+          >
             Book Therapy Session →
           </button>
+
         </div>
+
       </section>
     );
   }

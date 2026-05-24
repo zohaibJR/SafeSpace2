@@ -55,12 +55,14 @@ function Navbar() {
         </nav>
 
         <a
-          className="navbar__cta"
-          href="#contact"
-          onClick={() => setMenuOpen(false)}
-        >
-          Book a Session
-        </a>
+  className="navbar__cta"
+  href="https://cal.com/safe-space-qolbcw/therapy-session"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+>
+  Book a Session
+</a>
       </div>
     </header>
   )

@@ -2,32 +2,54 @@ import './therapyHeroSection.css'
 import Logo from '../Navbar/NavbarLogo.PNG'
 
 function TherapyHeroSection() {
+
+  const handleBooking = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section className="therapyHero" id="about">
+
       <div className="therapyHero__banner">
-        <div className="therapyHero__eyebrow">Virtual Therapy &amp; Counselling</div>
 
         <h1 className="therapyHero__title">
-          For emotions you <br /> never truly explore
+          For emotions you <br /> never truly navigate
         </h1>
 
         <p className="therapyHero__subtitle">
-          We provide virtual therapy and counselling with a{' '}
-          <span>licensed clinical psychologist.</span>
+          We provide virtual therapy and counseling through{' '}
+          <span>qualified mental health professionals.</span>
         </p>
 
         <div className="therapyHero__buttons">
-          <button className="cta-btn cta-btn--white" type="button">
+
+          <button
+            className="cta-btn cta-btn--white"
+            type="button"
+            onClick={() =>
+              handleBooking('https://cal.com/safe-space-qolbcw/15-minutes-free-introductory-session')
+            }
+          >
             Book Free Intro Session
           </button>
-          <button className="cta-btn cta-btn--ghost-white" type="button">
+
+          <button
+            className="cta-btn cta-btn--primary"
+            type="button"
+            onClick={() =>
+              handleBooking('https://cal.com/safe-space-qolbcw/therapy-session')
+            }
+          >
             Book Therapy Session
           </button>
+
         </div>
       </div>
 
       <div className="therapyHero__content">
+
         <div className="therapyHero__text">
+
           <p>
             <strong>SafeSpace</strong> is a virtual counselling and therapy
             platform that helps you manage emotions, behavioural issues, and
@@ -40,9 +62,16 @@ function TherapyHeroSection() {
             healthier, lasting resolutions.
           </p>
 
-          <button className="cta-btn cta-btn--primary" type="button">
+          <button
+            className="cta-btn cta-btn--primary"
+            type="button"
+            onClick={() =>
+              handleBooking('https://cal.com/safe-space-qolbcw/therapy-session')
+            }
+          >
             Book Therapy Session
           </button>
+
         </div>
 
         <div className="therapyHero__logoWrapper">
@@ -50,6 +79,7 @@ function TherapyHeroSection() {
             <img src={Logo} alt="SafeSpace Logo" className="therapyHero__logo" />
           </div>
         </div>
+
       </div>
     </section>
   )
